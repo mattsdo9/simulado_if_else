@@ -10,10 +10,30 @@
 
     //ENTRADA
 
+    const Mamão = Number(prompt(`Informe o valor de (5 unidades):`).trim().replace(",", "."));
+    const Melancia = Number(prompt(`Informe o valor de (3Kg):`).trim().replace(",", "."));
+    const Abacate = Number(prompt(`Informe o valor de (4 unidades);`).trim().replace(",", "."));
+    const Cebola = Number(prompt(`Informe o valor de (1.1Kg):`).trim().replace(",", "."));
+    const dinheiro = Number(prompt(`Informe quanto dinheiro possui para realizar a compra:`).trim().replace(",", "."));
+    const valorTotal = (Cebola + Melancia + Mamão + Abacate);
+    const sobrou = (dinheiro - valorTotal);
+    const faltará = (dinheiro < valorTotal);
 
     //PROCESSAMENTO
 
-
+    if (dinheiro > valorTotal) {
+        
+        alert(`Hávera dinheiro suficiente para realizar a compra de: R$${valorTotal}`);
+    }
+    else if (valorTotal > dinheiro) {
+        alert(`Não hávera dinheiro suficiente para realizar a compra de: R$${valorTotal}`);
+    }
+    else if (dinheiro - valorTotal == dinheiro > valorTotal) {
+        alert(`Sobrou dinheiro de: R$${sobrou}`);
+    }
+    else if (dinheiro - valorTotal == dinheiro < valorTotal) {
+        alert(`Falta dinheiro de: R$${faltará}`);
+    }
     //SAÍDA
 
 </script>
